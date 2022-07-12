@@ -1,0 +1,29 @@
+To run the project you can write :
+go run main.go order.go dbHandler.go wsHandler.go trade.go
+
+- first it will create database and the tables
+- then you can insert the values like :
+
+Enter asset pair: btcusdt
+buy/sell: buy
+Enter price: 1980
+Enter size: 2
+
+After that the market prices will be written, and if the price match the trades will be stored into db, and reported on console.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Summary:
+I found this project very interesting, as I was working with api endpoint with live data.
+I did not knew about “binance” before, so I was happy to learn it.
+
+First, I was reading the documentation about “binance” and then wrote down the requirements.
+As I am not yet experienced Golang developer, I had some need to check which web socket libraries exists, and to choose one. 
+I liked the most the type creation, and to create a functions on top of that. I am happy to do something new after so long of OO programming. :)
+Next funny part was streaming data, which I choose to push to channel.
+I spent maybe a bit more than 4 hours on the task, but if I would have more time I will do even more – I will probably in next few weeks, just to add  some unit tests, and more functionality and make it more user friendly.
+What I would also like to do is to create trades executions in go routines, so that it will no wasting time in setting market orders.
+Unfortunately my daily work is also requires quite some hours per day, so not just the time but the concentration is also what I loose in these late hours.
+All in all I had some fun writing this code, hope that it will bring you also some joy reading it.
+Best regards,
+Jozef

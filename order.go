@@ -26,7 +26,7 @@ func newOrder() order {
 	if assetPair != "\n" {
 		assetPair = strings.TrimSuffix(assetPair, "\n")
 	}
-	fmt.Print("Buy/Sell: ")
+	fmt.Print("buy/sell: ")
 	orderType, _ := reader.ReadString('\n')
 	if orderType != "\n" {
 		orderType = strings.TrimSuffix(orderType, "\n")
