@@ -69,9 +69,3 @@ func (o order) addOrder() {
 
 	fmt.Printf("Order saved %v %v \n", o.asset_pair, o.order_type)
 }
-
-func (o order) generateReport() {
-	db := returnDB()
-
-	closeDB(db)
-}

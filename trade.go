@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"strconv"
 	"time"
@@ -44,8 +45,8 @@ func (t marketOrder) addMarketOrder() {
 
 func execution(c *websocket.Conn, input chan Trade, order order) {
 	for trade := range input {
-		//json, _ := json.Marshal(trade)
-		//fmt.Println(string(json))
+		json, _ := json.Marshal(trade)
+		fmt.Println(string(json))
 		if order.order_type == "sell" && trade.BestBidPrice >= order.price {
 			tsize, _ := strconv.ParseFloat(trade.BestBidQty, 32)
 			osize, _ := strconv.ParseFloat(order.size, 32)

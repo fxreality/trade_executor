@@ -14,5 +14,4 @@ func main() {
 
 	execution(c, inputOne, newOrder)
 
-	newOrder.generateReport()
 }
